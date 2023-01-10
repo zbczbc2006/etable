@@ -1,0 +1,251 @@
+// 修改样式变量
+$vxe-font-color: rgba(0, 0, 0, 0.85);
+$vxe-table-header-font-weight: 600;
+$vxe-table-header-background-color: #fafafa;
+$vxe-table-border-color: rgba(0, 0, 0, 0.06);
+$vxe-table-resizable-line-color: rgba(0, 0, 0, 0.06);
+$vxe-table-column-padding-default: 16px 0;
+$vxe-table-cell-padding-left: 16px;
+$vxe-table-cell-padding-right: 16px;
+$vxe-table-row-hover-background-color: #fafafa;
+$vxe-table-validate-tooltip-error-color: #f53f3f;
+$vxe-table-validate-tooltip-error-background-color: #fff2f0;
+
+@import 'vxe-table/styles/index.scss';
+.vxe-table--border-line,
+.vxe-table--header-border-line {
+  display: none;
+}
+.vxe-cell--filter {
+  float: right;
+  line-height: 1.5em;
+}
+.vxe-cell--sort {
+  float: right;
+}
+.vxe-toolbar {
+  padding: 16px 0;
+}
+.vxe-header--row .vxe-header--column + .vxe-header--column .vxe-cell:last-child {
+  border-left: 1px solid $vxe-table-border-color;
+}
+
+// 可编辑样式覆盖
+$antprefix: ant !default;
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-cell > .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-cell > .#{$antprefix}-input-number,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-handler-down,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-handler-wrap,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-input,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection,
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-time-picker
+  .#{$antprefix}-time-picker-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-tree-cell > .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-tree-cell > .#{$antprefix}-input-number,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-handler-down,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-handler-wrap,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-time-picker
+  .#{$antprefix}-time-picker-input {
+  border: 0;
+  box-shadow: none;
+}
+.vxe-cell > .#{$antprefix}-calendar-picker,
+.vxe-cell > .#{$antprefix}-cascader-picker,
+.vxe-cell > .#{$antprefix}-input,
+.vxe-cell > .#{$antprefix}-input-number,
+.vxe-cell > .#{$antprefix}-select,
+.vxe-cell > .#{$antprefix}-time-picker,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-calendar-picker,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-cascader-picker,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-input,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-input-number,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-select,
+.vxe-form .vxe-form--item-content > .#{$antprefix}-time-picker,
+.vxe-tree-cell > .#{$antprefix}-calendar-picker,
+.vxe-tree-cell > .#{$antprefix}-cascader-picker,
+.vxe-tree-cell > .#{$antprefix}-input,
+.vxe-tree-cell > .#{$antprefix}-input-number,
+.vxe-tree-cell > .#{$antprefix}-select,
+.vxe-tree-cell > .#{$antprefix}-time-picker {
+  width: 100%;
+}
+.vxe-table--filter-antd-wrapper {
+  padding: 0.8em 1em;
+}
+.vxe-table--filter-antd-wrapper > .#{$antprefix}-input,
+.vxe-table--filter-antd-wrapper > .#{$antprefix}-input-number,
+.vxe-table--filter-antd-wrapper > .#{$antprefix}-rate,
+.vxe-table--filter-antd-wrapper > .#{$antprefix}-select {
+  width: 180px;
+}
+.vxe-cell > .#{$antprefix}-rate,
+.vxe-tree-cell > .#{$antprefix}-rate {
+  vertical-align: bottom;
+}
+.vxe-cell > .#{$antprefix}-rate .anticon-star,
+.vxe-tree-cell > .#{$antprefix}-rate .anticon-star {
+  display: block;
+}
+.col--valid-error
+  > .vxe-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input,
+.col--valid-error
+  > .vxe-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-cascader-input,
+.col--valid-error > .vxe-cell > .#{$antprefix}-input,
+.col--valid-error > .vxe-cell > .#{$antprefix}-input-number,
+.col--valid-error
+  > .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selector,
+.col--valid-error > .vxe-cell > .#{$antprefix}-select .#{$antprefix}-input,
+.col--valid-error
+  > .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection,
+.col--valid-error
+  > .vxe-tree-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input,
+.col--valid-error
+  > .vxe-tree-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-cascader-input,
+.col--valid-error > .vxe-tree-cell > .#{$antprefix}-input,
+.col--valid-error > .vxe-tree-cell > .#{$antprefix}-input-number,
+.col--valid-error > .vxe-tree-cell > .#{$antprefix}-select,
+.col--valid-error
+  > .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selector
+  .col--valid-error
+  > .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-input,
+.col--valid-error
+  > .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection {
+  border-color: #f56c6c;
+  box-shadow: none;
+}
+.vxe-table.cell--highlight .vxe-cell > .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-cell > .#{$antprefix}-input-number,
+.vxe-table.cell--highlight .vxe-tree-cell > .#{$antprefix}-input,
+.vxe-table.cell--highlight .vxe-tree-cell > .#{$antprefix}-input-number {
+  padding: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-input {
+  padding: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-input-number
+  .#{$antprefix}-input-number-input {
+  padding: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection
+  .#{$antprefix}-select-selection__rendered,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-select
+  .#{$antprefix}-select-selection
+  .#{$antprefix}-select-selection__rendered {
+  margin: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-cascader-picker-label,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-cascader-picker
+  .#{$antprefix}-cascader-picker-label {
+  padding: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-calendar-picker
+  .#{$antprefix}-calendar-picker-input {
+  padding: 0;
+}
+.vxe-table.cell--highlight
+  .vxe-cell
+  > .#{$antprefix}-time-picker
+  .#{$antprefix}-time-picker-input,
+.vxe-table.cell--highlight
+  .vxe-tree-cell
+  > .#{$antprefix}-time-picker
+  .#{$antprefix}-time-picker-input {
+  padding: 0;
+}
+
+table .#{$antprefix}-btn-link {
+  padding: 0;
+}
